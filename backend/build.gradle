@@ -8,7 +8,8 @@ group = 'com.dist_systems'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '21'
+	// Ensure you use a compatible Java version. Java 21 is not standard; use Java 11 or 17 if supported.
+	sourceCompatibility = '17'
 }
 
 configurations {
@@ -23,6 +24,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb' // MongoDB starter dependency
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
