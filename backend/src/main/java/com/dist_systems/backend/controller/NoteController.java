@@ -1,6 +1,8 @@
 // src/main/java/com/dist_systems/backend/controller/NoteController.java
 
 package com.dist_systems.backend.controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.dist_systems.backend.model.Note;
 import com.dist_systems.backend.service.NoteService;
@@ -13,6 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/notes")
 public class NoteController {
     private final NoteService noteService;
